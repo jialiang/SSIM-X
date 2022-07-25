@@ -2,9 +2,18 @@
 
 This is my personal modification to Cloudinary's [SSIMULACRA tool](https://github.com/cloudinary/ssimulacra).
 
-I'm calling it SSIM-X because SSIMULACRA was a mouthful.
+I'm calling it SSIM-X because SSIMULACRA is a mouthful.
 
-You can refer to the original Read Me at the bottom for what it does.
+You supply it with an original image and a compressed one, then it gives you a score on the perceived quality of the compressed image.
+You can also have it generate an edge difference map and a SSIM map to show you the areas most affected by the compression.
+
+Precompiled x64 Window binaries available under [Releases](https://github.com/jialiang/SSIM-X/releases).
+
+You can refer to the original Read Me at the bottom for more infomation.
+
+## Usage
+
+`ssimx path/to/original path/to/compressed [prefix for edge difference and ssim map]`
 
 ## My changes:
 
