@@ -241,10 +241,10 @@ int main(int argc, char** argv) {
 	string extension1 = argv1_string.substr(argv1_string.find_last_of(".") + 1);
 	string extension2 = argv2_string.substr(argv2_string.find_last_of(".") + 1);
 
-	if (extension1 == "avif") img1_temp = readAvif(argv[1]);
+	if (extension1 == "avif") cvtColor(readAvif(argv[1]), img1_temp, COLOR_RGB2BGR);
 	else img1_temp = imread(argv[1], -1);
 
-	if (extension2 == "avif") img2_temp = readAvif(argv[2]);
+	if (extension2 == "avif") cvtColor(readAvif(argv[2]), img2_temp, COLOR_RGB2BGR);
 	else img2_temp = imread(argv[2], -1);
 
 	if (img1_temp.size() != img2_temp.size()) {
